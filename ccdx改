@@ -1,0 +1,119 @@
+/******************************
+ *    文件：twelve_Spring.c   *
+ *    许可：CN-2082-2         *
+ *    作者：ccdx              *
+ *    部门：PE-362，UG        *
+ *    原产地: TI-352132李一一 *
+ *    春节十二响:Spring 12    *
+ *******************************
+/** #env "planet_engine" - target engine
+				-- 苏拉威西3号转向发动机**/
+
+
+#include<iostream>
+#include<string>
+#include<windows.h>
+#include<iomanip>
+using namespace std;
+int main() {
+	register int k;
+	k = 1;
+	cout << "春节12响启动程序" << endl;
+	int i;
+	for (i = 1; i < 101; i++) {
+		if (i <25) {
+			cout << "程序加载进度>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << i << "%" << '\r';
+			fflush(stdout);
+			Sleep(100);
+		}
+		if (i == 25) { system("cls"); }
+		if(i >25&&i<=50) {
+			cout << "程序加载进度>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << i << "%" << '\r';
+			cout << endl;
+			cout << "发动机正在启动..."<<endl;
+			fflush(stdout);
+			Sleep(100);
+		}
+		if (i > 50&& i <= 75) {
+			cout << "程序加载进度>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << i << "%" << '\r';
+			cout << endl;
+			cout << "发动机正在启动..."<<endl;
+			cout << "硬件系统自检完成..."<<endl;
+			fflush(stdout);
+			Sleep(100);
+		}
+		if (i > 75&& i <= 99) {
+			cout << "程序加载进度>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << i << "%" << '\r';
+			cout << endl;
+			cout << "发动机正在启动..."<<endl;
+			cout << "硬件系统自检完成..."<<endl;
+			cout << "撞针系统自检完成..." << endl;
+			fflush(stdout);
+			Sleep(100);
+		}
+		system("cls");
+		if (i == 100) {
+			system("cls");
+			cout << "程序加载进度>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" << i << "%" << '\r';
+			cout << endl;
+			cout << "发动机正在启动..." << endl;
+			cout << "硬件系统自检完成..." << endl;
+			cout << "撞针系统自检完成..." << endl;
+			cout << "发动机启动完成..." << endl;
+			fflush(stdout);
+			Sleep(100);
+		}
+		/*if (i % 10 == 0) {
+			Sleep(1);
+
+		}*/
+	}
+	while (k <= 10) {
+
+		cout<<"行星转向发动机正在启动中.............."<<10*k<<"%"<<'\r';
+		k += 1;
+
+		Sleep(100);
+	}
+	int c = 12;
+	while (c > 0)
+	{
+		Sleep(5);
+		system("color 46");
+
+		Sleep(100);
+		system("color 04");
+
+		c = c - 1;
+		Sleep(10);
+		system("cls");
+	}
+	system("color 04");
+	int a; a = 12;
+
+	while (a >= 1) {
+		cout << setiosflags(ios::right);
+		cout << setw(58) << "Biu!!!" << endl;
+		a -= 1;
+		Sleep(100);
+	}
+	//行星发动机形状
+	string cc[16] = { {"        *        "},{"        *        "},{"        *        "},{ "     *     *     "},
+	{ "    *       *    "},{"   *         *   "},{"   *         *   "},{"   *         *   "},
+	{"   *         *   "},{"   *         *   "},{"   *         *   "},{"   *         *   "},
+	{"   ***********   "},{ "***           ***"},{ "**             **"},
+	{ "*               *"},
+	};
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	for (int c = 0; c < 16; c++)
+	{
+		cout << setiosflags(ios::right);
+		cout << setw(64)<<cc[c] << endl;
+	}
+									
+
+	return 0;
+	system("pause");
+}
